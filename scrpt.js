@@ -7,7 +7,7 @@ const caixaResultado = document.querySelector(".caixaResultado");
 const textoResultado = document.querySelector(".textoResultado");
 const perguntas[
    {
-      enunciado: "pergunta1",
+      enunciado: "",
       alternativas: [
          {
             texto: "alternativa1",
@@ -55,9 +55,9 @@ function mostraPergunta() {
 }
 function mostraAlternativas(){
 for( const alternativa of perguntaAtual.alternativas){
- const bontaoAlternativa = createElement("button");
- bontaoAlternativa.textContent = alternativa.texto; 
- caixaAlternativas.appendChild( bontaoAlternativa);
+ const botaoAlternativa = createElement("button");
+ botaoAlternativa.textContent = alternativa.texto; 
+ caixaAlternativas.appendChild( botaoAlternativa);
 }
 }
 mostraAlternativas();

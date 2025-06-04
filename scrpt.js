@@ -60,4 +60,4 @@ for( const alternativa of perguntaAtual.alternativas){
  caixaAlternativas.appendChild( botaoAlternativa);
 }
 }
-mostraAlternativas();
+mostraPergunta();

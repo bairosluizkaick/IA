@@ -51,7 +51,7 @@ let perguntaAtual;
 let historiaFinal = "";
 
 function mostraPergunta(){
-   if (atual >= pergunta .length){
+   if (atual >= pergunta.length){
       mostraResultado();
       return;
    }
@@ -65,7 +65,7 @@ function mostraAlternativas(){
     for(const alternativa of perguntaAtual.alternativas){
         const botaoAlternativa = document.createElement("button");
         botaoAlternativa.textContent = alternativa.texto;
-        botaoAlternativas. addEventlistener("click", ()=>respostaSelecionada(alyernativa))
+        botaoAlternativa. addEventlistener("click", ()=>respostaSelecionada(alternativa))
         caixaAlternativas.appendChild(botaoAlternativa);
       
     }

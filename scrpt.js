@@ -57,6 +57,8 @@ function mostraPergunta(){
    }
     perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
+    caixaAlternativas .textContent ="";
+    textoResultado .textContent = "";
     mostraAlternativas();
 }
 function mostraAlternativas(){
@@ -65,12 +67,10 @@ function mostraAlternativas(){
         botaoAlternativa.textContent = alternativa.texto;
         botaoAlternativas. addEventlistener("click", ()=>respostaSelecionada(alyernativa))
         caixaAlternativas.appendChild(botaoAlternativa);
-         
-        
-        caixaAlternativas.appendChild(botaoAlternativa);
+      
     }
 }
-//mostraPergunta();
+
 
 function respostaSelecionada(opcaoSelecionada){
 const afirmacao = opcaoSelecionada.afirmacao;
@@ -84,3 +84,4 @@ function mostraResultado(){
    textoResultado.textContent = "historiaFinal"
    caixaAlternativas.textContent = "";
 }
+mostraPergunta();

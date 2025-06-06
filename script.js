@@ -51,7 +51,7 @@ let perguntaAtual;
 let historiaFinal = "";
 
 function mostraPergunta(){
-   if (atual >= pergunta.length){
+   if (atual >= perguntas.length){
       mostraResultado();
       return;
    }

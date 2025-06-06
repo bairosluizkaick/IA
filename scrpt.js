@@ -51,6 +51,10 @@ let perguntaAtual;
 let historiaFinal = "";
 
 function mostraPergunta(){
+   if (atual >= pergunta .length){
+      mostraResultado();
+      return;
+   }
     perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
     mostraAlternativas();
@@ -68,8 +72,15 @@ function mostraAlternativas(){
 }
 //mostraPergunta();
 
-function respostaSelecionada(opcaoSelecionada)
+function respostaSelecionada(opcaoSelecionada){
 const afirmacao = opcaoSelecionada.afirmacao;
-historiaFinal = afirmacao;
+historiaFinal += afirmacao +" ";
 atual++;
 mostraPergunta();
+
+}
+function mostraResultado(){
+   caixaPerguntas.textContent = "conclusao";
+   textoResultado.textContent = "historiaFinal"
+   caixaAlternativas.textContent = "";
+}
